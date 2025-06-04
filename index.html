@@ -16,6 +16,10 @@
             padding: 0;
         }
 
+        .authors span {
+            margin: 0 1.5em;
+        }
+
         .container {
             max-width: 1100px;
             margin: auto;
@@ -24,14 +28,16 @@
 
         h1.publication-title {
             font-family: 'Jost', sans-serif;
-            font-weight: 500;
+            font-weight: 800;
             text-align: center;
-            font-size: 2.4em;
+            font-size: 2.9em;
             margin-bottom: 0.2em;
         }
 
         h2, h3 {
-            font-weight: 400;
+            font-family: 'Jost', sans-serif;
+            font-size: 2.0em;
+            font-weight: 600;
             color: #111;
         }
 
@@ -91,45 +97,46 @@
 </head>
 <body>
     <div class="container">
-        <h1>Gaussian Splatting — Comparison Videos</h1>
+        <h1 class="publication-title">Modeling Tornadoes with Neural Inverse Rendering</h1>
         <div class="authors">
-            <p>Author One, Author Two, Author Three<br>
-            <em>Institution or Affiliation</em></p>
+        <p class="authors">
+            <span>Adam Yang</span>
+            <span>Nadula Kadawedduwa</span>
+            <span>Tianfu Wang</span>
+            <span>Maria Molina</span>
+            <span>Christopher Metzler</span><br>
+            <em>Intelligent Sensing Lab, University of Maryland</em>
+        </p>
         </div>
 
         <div class="section abstract">
             <h2>Abstract</h2>
             <p>
-                Tornadoes are among the most destructive weather phenomena and yet not fully understood. Enhancing knowledge of such events will lead to improved prediction and damage mitigation protocols. In conjunction with advances in computer vision, the structure of tornadoes can be better understood through 3D modeling. In this work, we propose a semi-automated framework for generating 3D models of tornadoes, specifically, using advances inverse differentiable rendering and novel view synthesis (NVS). We demonstrate one can effective reconstruct a tornado using an array of cameras. We validate this pipeline in the lab using a tornado machine. 
+            Tornadoes are among the most destructive weather phenomena and yet not fully understood. Enhancing knowledge of such events will lead to improved prediction and damage mitigation protocols. In conjunction with advances in computer vision, the structure of tornadoes can be better understood through 3D modeling. In this work, we propose a semi-automated framework for generating 3D models of tornadoes, specifically, using advances inverse differentiable rendering and novel view synthesis (NVS). We demonstrate one can effective reconstruct a tornado using an array of cameras. We validate this pipeline in the lab using a tornado machine. 
             </p>
         </div>
-
-        <div class="section">
-            <h2>Comparison Videos</h2>
+    <div class="section">
+            <h2>Video Results</h2>
             <div class="video-row">
                 <div class="video-wrapper">
                     <video controls preload="metadata">
                         <source src="assets/flythrough.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
-                    <p>Flythrough</p>
                 </div>
                 <div class="video-wrapper">
                     <video controls preload="metadata">
                         <source src="assets/wobble.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
-                    <p>Wobble</p>
                 </div>
             </div>
         </div>
-
         <div class="section method">
-            <h2>Method Overview</h2>
-            <p>
-                Gaussian Splatting models scenes as collections of 3D Gaussians that are rendered using a real-time rasterization pipeline.
-                Our approach enables fast training and high-quality rendering. Please refer to our <a href="#">paper</a> and <a href="#">GitHub repository</a> for more details.
-            </p>
+            <h2>Paper Links</h2>
+             <p>
+        <a href="https://github.com/adamy03/3Dtornadoes" target="_blank">GitHub Repository</a>
+        </p>
         </div>
     </div>
 </body>
