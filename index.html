@@ -2,54 +2,137 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Gaussian Splatting Videos</title>
+    <title>Gaussian Splatting — Comparison Videos</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts for consistent typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            max-width: 900px;
+            background-color: #f4f4f4;
+            color: #111;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1100px;
             margin: auto;
             padding: 2em;
-            line-height: 1.6;
-            color: #222;
+            background-color: #fff;
         }
-        h2 {
+
+        h1, h2, h3 {
+            font-weight: 400;
             color: #111;
         }
+
+        h1 {
+            text-align: center;
+            font-size: 2.4em;
+            margin-bottom: 0.2em;
+        }
+
+        .authors {
+            text-align: center;
+            font-size: 1.1em;
+            margin-bottom: 1.5em;
+        }
+
+        .section {
+            margin-top: 2em;
+        }
+
         .video-row {
             display: flex;
-            gap: 1em;
             flex-wrap: wrap;
-            justify-content: center;
-            margin-top: 1em;
+            justify-content: space-between;
+            gap: 2em;
         }
+
         .video-wrapper {
-            flex: 1 1 45%;
-            max-width: 100%;
+            flex: 1 1 48%;
         }
+
+        video {
+            width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+            background-color: #000;
+        }
+
         .video-wrapper p {
             text-align: center;
             margin-top: 0.5em;
             font-size: 0.95em;
         }
+
+        .abstract, .method {
+            font-size: 1.05em;
+            line-height: 1.7;
+        }
+
+        a {
+            color: #2c6bed;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .video-wrapper {
+                flex: 1 1 100%;
+            }
+        }
     </style>
 </head>
 <body>
-    <h2>Comparison Videos</h2>
-    <div class="video-row">
-        <div class="video-wrapper">
-            <video controls preload="metadata" width="100%">
-                <source src="assets/flythrough.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <p>Flythrough</p>
+    <div class="container">
+        <h1>Gaussian Splatting — Comparison Videos</h1>
+        <div class="authors">
+            <p>Author One, Author Two, Author Three<br>
+            <em>Institution or Affiliation</em></p>
         </div>
-        <div class="video-wrapper">
-            <video controls preload="metadata" width="100%">
-                <source src="assets/wobble.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <p>Wobble</p>
+
+        <div class="section abstract">
+            <h2>Abstract</h2>
+            <p>
+                This webpage provides supplemental comparison videos for our work on Gaussian Splatting.
+                Our method demonstrates high-fidelity 3D reconstruction and rendering from sparse multi-view images.
+                Below, you can find flythroughs and motion comparisons against state-of-the-art techniques.
+            </p>
+        </div>
+
+        <div class="section method">
+            <h2>Method Overview</h2>
+            <p>
+                Gaussian Splatting models scenes as collections of 3D Gaussians that are rendered using a real-time rasterization pipeline.
+                Our approach enables fast training and high-quality rendering. Please refer to our <a href="#">paper</a> and <a href="#">GitHub repository</a> for more details.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Comparison Videos</h2>
+            <div class="video-row">
+                <div class="video-wrapper">
+                    <video controls preload="metadata">
+                        <source src="assets/flythrough.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p>Flythrough</p>
+                </div>
+                <div class="video-wrapper">
+                    <video controls preload="metadata">
+                        <source src="assets/wobble.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p>Wobble</p>
+                </div>
+            </div>
         </div>
     </div>
 </body>
